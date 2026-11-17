@@ -22,7 +22,7 @@ jobs:
           - os: windows-latest
             python: '3.13'
             pillow: Pillow
-          - os: macos-latest
+          - os: macos-15-intel
             python: '3.13'
             pillow: Pillow
     steps:

@@ -16,7 +16,7 @@ python -m unittest discover -s tests -v
 python scripts/build_release.py --out dist/v0.2.0
 ```
 
-The [Validate workflow](https://github.com/AERIF-Dev/AssetRefGen/actions/workflows/validate.yml) runs the same gates on Linux/Python 3.10/Pillow 10.1.0, Windows/Python 3.13, and macOS/Python 3.13. Hosted results are recorded per commit in GitHub Actions; they are separate from the local Windows evidence above. Release archives include the complete skill and license, enforce a public-file allowlist, check internal links, verify ZIP readback/CRC and emit SHA-256 checksums. They exclude development outputs, exact local receipts and private source material.
+The [Validate workflow](https://github.com/AERIF-Dev/AssetRefGen/actions/workflows/validate.yml) runs the same gates on Linux/Python 3.10/Pillow 10.1.0, Windows/Python 3.13, and Intel macOS 15/Python 3.13. The macOS job uses GitHub's supported `macos-15-intel` label after the default ARM64 runner remained queued without executing. Hosted results are recorded per commit in GitHub Actions; they are separate from the local Windows evidence above. Native Apple Silicon execution remains unverified. Release archives include the complete skill and license, enforce a public-file allowlist, check internal links, verify ZIP readback/CRC and emit SHA-256 checksums. They exclude development outputs, exact local receipts and private source material.
 
 ## Candidate validation retained below — 0.2.0-rc.1
 
