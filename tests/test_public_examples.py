@@ -24,7 +24,7 @@ class PublicExamplesTest(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory(prefix="assetrefgen-examples-")
         self.addCleanup(temporary.cleanup)
-        self.work = Path(temporary.name)
+        self.work = Path(temporary.name).resolve()
 
     def run_cli(self, *args, code=0, cli=CLI):
         result = subprocess.run([sys.executable, "-X", "utf8", "-B", str(cli), *map(str, args)],

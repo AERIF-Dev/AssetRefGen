@@ -6,6 +6,7 @@
 - Added versioned Codex installation from `skills/assetrefgen`, and standalone skill and full project ZIPs with SHA-256 checksums.
 - Included a public example gallery, original roster fixtures, and one complete live four-view reference set with provenance and visual QA.
 - Added a local project validation command and a CI workflow for checks that use existing fixtures.
+- Fixed roster initialization when Windows temporary directories use 8.3 short-path aliases, with an initialization/resume regression test.
 
 ## 0.2.0-rc.1
 

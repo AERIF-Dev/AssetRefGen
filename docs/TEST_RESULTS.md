@@ -2,9 +2,11 @@
 
 ## v0.2.0 publication checks — 2026-11-17
 
-The stable release promotes the validated candidate without changing its single-asset or roster runtime. The repository now contains one installable skill at `skills/assetrefgen/`, MIT licensing, public installation/contribution guides, a standalone structural validator, release-packaging tests and GitHub Actions. Proposed v0.3.0 features are recorded only in the [roadmap](ROADMAP.md).
+The stable release promotes the validated candidate and fixes Windows short-path handling during roster initialization. The repository now contains one installable skill at `skills/assetrefgen/`, MIT licensing, public installation/contribution guides, a standalone structural validator, release-packaging tests and GitHub Actions. Proposed v0.3.0 features are recorded only in the [roadmap](ROADMAP.md).
 
-Local Windows validation passed **22 tests** under each of two environments: Python 3.10 with Pillow 10.1.0 (the declared minimums), and Python 3.13 with Pillow 13.0.0. Both passed 17 skill-helper tests and 5 public-example/release tests. Structure validation, Python compilation and the minimum-profile dependency check also passed. Ordinary tests make no image-service calls.
+Local Windows validation initially passed 22 tests under each of two environments: Python 3.10 with Pillow 10.1.0 (the declared minimums), and Python 3.13 with Pillow 13.0.0. Hosted Windows CI then exposed an 8.3 short-path alias mismatch in the roster staging directory. A regression test reproduced the failure locally and passed after canonicalizing the already-validated staging parent; symbolic-link and containment guards are preserved. The final suite contains **23 tests**: 18 skill-helper tests and 5 public-example/release tests. Structure validation, Python compilation and the minimum-profile dependency check also passed. Ordinary tests make no image-service calls.
+
+After the correction, all 23 tests passed in both local Windows environments, including the real short-path regression with no skips. Trusted temporary test roots are resolved to avoid platform aliases; the dedicated Windows regression explicitly uses an 8.3 alias. The original single-asset helper remains unchanged.
 
 ```sh
 python -m pip install -r requirements-dev.txt

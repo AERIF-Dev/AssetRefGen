@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -29,7 +30,8 @@ class RosterToolsTest(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.root = Path(temporary.name)
+        # Resolve trusted OS temp aliases (for example macOS /var -> /private/var).
+        self.root = Path(temporary.name).resolve()
         for name in ("a", "b"):
             (self.root / name).mkdir()
             image(self.root / name / "same.png", color="navy" if name == "a" else "red")
@@ -108,6 +110,28 @@ class RosterToolsTest(unittest.TestCase):
         self.data["assets"][0]["style"] = "changed"
         self.write_inventory()
         self.run_cli("init", self.batch, "--inventory", self.inventory, status=2, error="Inventory changed")
+
+    @unittest.skipUnless(os.name == "nt", "Windows short-path regression")
+    def test_windows_short_path_batch_initialization_and_resume(self):
+        import ctypes
+        from ctypes import wintypes
+
+        get_short_path = ctypes.WinDLL("kernel32", use_last_error=True).GetShortPathNameW
+        get_short_path.argtypes = (wintypes.LPCWSTR, wintypes.LPWSTR, wintypes.DWORD)
+        get_short_path.restype = wintypes.DWORD
+        buffer = ctypes.create_unicode_buffer(32768)
+        length = get_short_path(str(self.root), buffer, len(buffer))
+        self.assertGreater(length, 0)
+        self.assertLess(length, len(buffer))
+        short_root = Path(buffer.value)
+        if str(short_root).casefold() == str(self.root.resolve()).casefold():
+            self.skipTest("8.3 aliases are disabled on this test volume")
+        self.batch = short_root / "batch"
+        self.inventory = short_root / "inventory.json"
+        self.assertEqual(self.init()["counts"], {"pending": 2})
+        before = sha(self.batch / "roster.json")
+        self.run_cli("resume", self.batch)
+        self.assertEqual(sha(self.batch / "roster.json"), before)
 
     def test_exif_oriented_crop_and_transactional_bad_inventory(self):
         source = self.root / "oriented.jpg"

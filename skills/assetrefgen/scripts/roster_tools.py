@@ -218,7 +218,9 @@ def init(args):
     if not target.parent.is_dir():
         raise ValueError("Batch parent directory must already exist")
     ref.reject_preserved_path(target)
-    staging = Path(tempfile.mkdtemp(prefix=f".{target.name}.init-", dir=target.parent))
+    # The reference helper compares resolved descendants with this root.
+    # Canonicalize Windows 8.3 aliases before creating the asset directories.
+    staging = Path(tempfile.mkdtemp(prefix=f".{target.name}.init-", dir=target.parent.resolve()))
     try:
         (staging / "assets").mkdir()
         (staging / "briefs").mkdir()

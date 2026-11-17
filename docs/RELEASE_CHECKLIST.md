@@ -36,9 +36,9 @@ Preparation checks below were completed by the agent on 2026-11-17. They are sep
 
 Complete against the exact published commit and release. GitHub's workflow and release pages provide the authoritative hosted state.
 
-- [ ] Push the reviewed public files to `main` without force and verify the fetched commit.
+- [x] Push the reviewed public files to `main` without force and verify the remote commit.
 - [ ] Confirm all hosted validation jobs pass before tagging stable v0.2.0.
-- [ ] Verify README rendering and public gallery-image responses.
+- [x] Verify README rendering and public gallery-image responses.
 - [ ] Run the official skill installer against the public tagged directory into an isolated test destination.
 - [ ] Download published assets, verify checksums, extract both ZIPs and confirm required files.
 - [ ] Confirm no private source art, machine-specific paths, secrets or development outputs were published.
