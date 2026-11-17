@@ -16,7 +16,7 @@ python -m unittest discover -s tests -v
 python scripts/build_release.py --out dist/v0.2.0
 ```
 
-The default [Validate workflow](https://github.com/AERIF-Dev/AssetRefGen/actions/workflows/validate.yml) runs on push and pull requests for Windows and Linux. Hosted results for the tested runtime at commit `cf50d4f` were as follows.
+The default Validate workflow runs on pushes and pull requests for Windows and Linux. The required jobs passed on the exact v0.2.0 release commit, `f7503e44379da7aeffa6e0da2744ed54c980aa74`. [Release commit CI run](https://github.com/AERIF-Dev/AssetRefGen/actions/runs/44131068273)
 
 | Hosted environment | Result |
 | --- | --- |
@@ -28,7 +28,17 @@ GitHub canceled the Intel job `134190080741` after multiple runner-acquisition a
 
 The release archives include the complete skill and license. Packaging enforces a public-file allowlist, checks internal links, verifies ZIP readback and CRC, and emits SHA-256 checksums. The archive contents exclude development outputs, exact local receipts and private source material.
 
-On Windows, the extracted standalone skill passed roster initialization in a clean Python 3.13/Pillow 13.0.0 environment. The official Codex installer also installed the skill from public commit `cf50d4f` into an isolated destination. All 17 installed files matched the standalone ZIP byte for byte. Installation from the public tag and verification of the published downloads are tracked in the [release checklist](RELEASE_CHECKLIST.md).
+On Windows, the extracted standalone skill passed roster initialization in a clean Python 3.13/Pillow 13.0.0 environment. Before tagging, all 17 files installed by the official Codex installer from public commit `cf50d4f` matched the standalone ZIP byte for byte.
+
+## Public release verification — 2026-11-17
+
+GitHub published v0.2.0 at 16:58:04 UTC on commit `f7503e44379da7aeffa6e0da2744ed54c980aa74`. [GitHub release](https://github.com/AERIF-Dev/AssetRefGen/releases/tag/v0.2.0)
+
+- The official Codex installer installed the skill from the public `v0.2.0` tag into an isolated destination. All 17 installed files matched the standalone ZIP byte for byte, and the helper's `--help` loaded in a clean environment.
+- Anonymous downloads succeeded for both ZIPs and `SHA256SUMS.txt`. The SHA-256 values matched the published checksums, both archives passed CRC checks, and the extracted contents matched the corresponding local packages. The full project ZIP contained 74 files and passed the structural validator. The standalone skill ZIP contained 17 files.
+- The public allowlist and privacy checks passed. A fresh public clone passed the byte audit for all 74 files.
+
+The published ZIPs retain the documentation checkpoint from the tagged source. This page and the [release checklist](RELEASE_CHECKLIST.md) record the postpublication evidence.
 
 ## Candidate validation retained below — 0.2.0-rc.1
 

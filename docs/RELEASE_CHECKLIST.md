@@ -36,11 +36,11 @@ Preparation checks below were completed by the agent on 2026-11-17. They are sep
 
 ## Final public verification
 
-Complete against the exact published commit and release. GitHub's workflow and release pages provide the authoritative hosted state.
+Completed on 2026-11-17 against tag `v0.2.0` at commit `f7503e44379da7aeffa6e0da2744ed54c980aa74`. The published ZIPs retain the tagged documentation checkpoint. This checklist records postpublication verification. [GitHub release](https://github.com/AERIF-Dev/AssetRefGen/releases/tag/v0.2.0)
 
 - [x] Push the reviewed public files to `main` without force and verify the remote commit.
-- [ ] Confirm required Windows and Linux hosted validation passes on the release commit before tagging stable v0.2.0.
+- [x] Confirm required Windows and Linux hosted validation passed on the release commit before tagging v0.2.0. [Release commit CI run](https://github.com/AERIF-Dev/AssetRefGen/actions/runs/44131068273)
 - [x] Verify README rendering and public gallery-image responses.
-- [ ] Run the official skill installer against the public tagged directory into an isolated test destination.
-- [ ] Download published assets, verify checksums, extract both ZIPs and confirm required files.
-- [ ] Confirm no private source art, machine-specific paths, secrets or development outputs were published.
+- [x] Run the official skill installer against the public tag in an isolated destination and match all 17 installed files to the standalone ZIP.
+- [x] Download all three release assets anonymously, verify the two ZIP checksums and CRC, extract both archives, and validate the extracted full project.
+- [x] Audit the fresh public clone and published ZIPs against the public allowlist. Confirm the published files exclude private source art, machine-specific paths, secrets and development outputs.
