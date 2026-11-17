@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "mode": "single",
+  "quality": "quick",
+  "generation_order": "per-asset-complete",
+  "count_rationale": "One requested kiln traveler, located in the left portion of the source.",
+  "sources": [
+    {
+      "id": "characters",
+      "path": "sources/characters.png"
+    }
+  ],
+  "assets": [
+    {
+      "id": "kiln-traveler",
+      "name": "Kiln traveler",
+      "category": "humanoid",
+      "style": "hand-painted storybook game concept, soft matte surfaces",
+      "master": "master_front.png",
+      "views": [
+        "front",
+        "left",
+        "back",
+        "right"
+      ],
+      "origin": "source-derived",
+      "regions": [
+        {
+          "source_id": "characters",
+          "box": [
+            0,
+            160,
+            575,
+            940
+          ]
+        }
+      ],
+      "identity_spec": {
+        "silhouette": "squat terracotta domed kiln biped, open chimney",
+        "features": "cream arched face, two round eyes, one pale blue chest medallion",
+        "anatomy": "two segmented arms with mitten fists, two short legs and broad feet",
+        "pose": "neutral standing, arms slightly separated",
+        "front": "face and badge",
+        "sides": "left faces image-left, right faces image-right"
+      },
+      "inferences": [
+        "Rear is a provisional continuous brick dome/barrel without another face or badge."
+      ],
+      "group": {
+        "id": "cast",
+        "label": "Cast"
+      },
+      "separation_rationale": "Distinct silhouette and distinguishing construction in the source."
+    }
+  ]
+}

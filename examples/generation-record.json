@@ -1,0 +1,76 @@
+{
+  "purpose": "Original public examples; actual built-in image generation followed by deterministic copying/cropping/sheet composition",
+  "date": "2026-11-17",
+  "tool": "image_gen.imagegen",
+  "model": "unexposed",
+  "seed": "unexposed",
+  "quality": "unexposed",
+  "cost": "unexposed",
+  "generation_calls": 6,
+  "images": [
+    {
+      "path": "sources/characters.png",
+      "sha256": "f04834125916beb063501af94efd9791460ad02a87bdadfd912d25da0d9d12e4",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "sources/objects.png",
+      "sha256": "a97789970d8e097d38a8da10a7dfce11d74045afd6c60afcabced5369d393a02",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "path": "kiln-traveler/master_front.png",
+      "sha256": "32fdbe771ede7ce1e1772a7290e37bf5e7dd2f6ad73905b2379f9a1600c80bfb",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "kiln-traveler/front.png",
+      "sha256": "32fdbe771ede7ce1e1772a7290e37bf5e7dd2f6ad73905b2379f9a1600c80bfb",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "kiln-traveler/left.png",
+      "sha256": "214968b46bbb9aeb7abceeee42da84e337836a83ef4ba85124feb3da653d549b",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "kiln-traveler/back.png",
+      "sha256": "18361999bd1fc4a668f6cbc97e91fbcdff62fa769229e1ea280ee7a31485d945",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "kiln-traveler/right.png",
+      "sha256": "aa385347ef955ee759acf551a9b7493bd121ac0c36c58da3c08113998387a4ae",
+      "size": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "operations": {
+    "source_rosters": "two generation calls; exact source prompts in requests",
+    "master": "one identity-preserving edit using the original crop",
+    "front": "exact byte reuse of suitable selected master, not a new generation",
+    "remaining_views": "three separate edits anchored to the same selected master; no mirroring",
+    "source_crop": "characters.png [0,160,575,940] preserved as single-character.png",
+    "sheets": "deterministic composition; native panels untouched; separate resized previews"
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "mode": "folder",
+  "quality": "quick",
+  "generation_order": "per-asset-complete",
+  "count_rationale": "Two original concept images, five unique subjects total; no shared design across these two files.",
+  "sources": [
+    {
+      "id": "characters",
+      "path": "sources/characters.png"
+    },
+    {
+      "id": "objects",
+      "path": "sources/objects.png"
+    }
+  ],
+  "assets": [
+    {
+      "id": "kiln-traveler",
+      "name": "Kiln traveler",
+      "category": "humanoid",
+      "style": "hand-painted storybook game concept, soft matte surfaces",
+      "master": "master_front.png",
+      "views": [
+        "front",
+        "left",
+        "back",
+        "right"
+      ],
+      "origin": "source-derived",
+      "regions": [
+        {
+          "source_id": "characters",
+          "box": [
+            0,
+            160,
+            575,
+            940
+          ]
+        }
+      ],
+      "identity_spec": {
+        "silhouette": "squat terracotta domed kiln biped, open chimney",
+        "features": "cream arched face, two round eyes, one pale blue chest medallion",
+        "anatomy": "two segmented arms with mitten fists, two short legs and broad feet",
+        "pose": "neutral standing, arms slightly separated",
+        "front": "face and badge",
+        "sides": "left faces image-left, right faces image-right"
+      },
+      "inferences": [
+        "Rear is a provisional continuous brick dome/barrel without another face or badge."
+      ],
+      "group": {
+        "id": "cast",
+        "label": "Cast"
+      },
+      "separation_rationale": "Distinct silhouette and distinguishing construction in the source."
+    },
+    {
+      "id": "pond-courier",
+      "name": "Pond courier",
+      "category": "creature",
+      "style": "hand-painted storybook game concept, soft matte surfaces",
+      "master": "master_front.png",
+      "views": [
+        "front",
+        "left",
+        "back",
+        "right"
+      ],
+      "origin": "source-derived",
+      "regions": [
+        {
+          "source_id": "characters",
+          "box": [
+            600,
+            110,
+            980,
+            940
+          ]
+        }
+      ],
+      "identity_spec": {
+        "silhouette": "lanky green frog biped with broad smooth oval head",
+        "features": "ochre poncho, two eyes, long arms and legs, webbed hands and three-toed feet",
+        "anatomy": "two arms and two legs, no visible tail",
+        "pose": "natural relaxed standing"
+      },
+      "inferences": [
+        "Poncho rear and hidden joints are provisional; retain simple garment construction."
+      ],
+      "group": {
+        "id": "wildlife",
+        "label": "Wildlife"
+      },
+      "separation_rationale": "Distinct silhouette and distinguishing construction in the source."
+    },
+    {
+      "id": "moth-keeper",
+      "name": "Moth keeper",
+      "category": "creature",
+      "style": "hand-painted storybook game concept, soft matte surfaces",
+      "master": "master_front.png",
+      "views": [
+        "front",
+        "left",
+        "back",
+        "right"
+      ],
+      "origin": "source-derived",
+      "regions": [
+        {
+          "source_id": "characters",
+          "box": [
+            1030,
+            230,
+            1536,
+            940
+          ]
+        }
+      ],
+      "identity_spec": {
+        "silhouette": "round pear-shaped indigo moth, two feathered antennae",
+        "features": "orange oval eyes, lavender scarf, two small arms, two short feet, hanging wings",
+        "anatomy": "two arms, two feet, two wing covers, two antennae",
+        "pose": "resting, wings closed"
+      },
+      "inferences": [
+        "Hidden rear wing attachment is provisional; no additional limbs inferred."
+      ],
+      "group": {
+        "id": "wildlife",
+        "label": "Wildlife"
+      },
+      "separation_rationale": "Distinct silhouette and distinguishing construction in the source."
+    },
+    {
+      "id": "survey-rover",
+      "name": "Survey rover",
+      "category": "vehicle",
+      "style": "hand-painted storybook game concept, soft matte surfaces",
+      "master": "master_front.png",
+      "views": [
+        "front",
+        "left",
+        "back",
+        "right"
+      ],
+      "origin": "source-derived",
+      "regions": [
+        {
+          "source_id": "objects",
+          "box": [
+            10,
+            140,
+            820,
+            920
+          ]
+        }
+      ],
+      "identity_spec": {
+        "silhouette": "rounded teal vehicle with four chunky wheels on two axles",
+        "features": "cream front bumper, centered amber lamp, short mast with red ball sensor",
+        "state": "assembled, wheels straight, mast fixed",
+        "front": "lamp and cream bumper"
+      },
+      "inferences": [
+        "Far fourth wheel and hidden rear/underbody are provisional, preserve four-wheel design."
+      ],
+      "group": {
+        "id": "equipment",
+        "label": "Equipment"
+      },
+      "separation_rationale": "Distinct silhouette and distinguishing construction in the source."
+    },
+    {
+      "id": "signal-lantern",
+      "name": "Signal lantern",
+      "category": "prop_machinery",
+      "style": "hand-painted storybook game concept, soft matte surfaces",
+      "master": "master_front.png",
+      "views": [
+        "front",
+        "left",
+        "back",
+        "right"
+      ],
+      "origin": "source-derived",
+      "regions": [
+        {
+          "source_id": "objects",
+          "box": [
+            1080,
+            20,
+            1645,
+            915
+          ]
+        }
+      ],
+      "identity_spec": {
+        "silhouette": "copper six-sided lantern with arched handle and broad dark base",
+        "features": "amber glass chamber, domed cap, one bail handle",
+        "state": "assembled upright, handle upright",
+        "front": "one broad pane centered toward viewer"
+      },
+      "inferences": [
+        "Hidden frame edges complete a regular six-sided chamber; exact rear seam layout unknown."
+      ],
+      "group": {
+        "id": "equipment",
+        "label": "Equipment"
+      },
+      "separation_rationale": "Distinct silhouette and distinguishing construction in the source."
+    }
+  ]
+}

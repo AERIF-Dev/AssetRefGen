@@ -1,0 +1,4 @@
+interface:
+  display_name: "Asset Reference Generator"
+  short_description: "Single assets, rosters and resumable reference batches"
+  default_prompt: "Use $assetrefgen to process every distinct asset in this source in Quick Mode with four views each."

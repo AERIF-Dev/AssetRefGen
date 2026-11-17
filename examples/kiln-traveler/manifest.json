@@ -1,0 +1,26 @@
+{
+  "asset_id": "kiln-traveler",
+  "category": "humanoid",
+  "style": "hand-painted storybook game concept, matte terracotta and ceramic",
+  "master": "master_front.png",
+  "required_views": [
+    "front",
+    "left",
+    "back",
+    "right"
+  ],
+  "optional_views": [],
+  "sources": [
+    {
+      "kind": "image",
+      "path": "source/source_01.png",
+      "sha256": "65cd598a706e1f469df93f659e4e9bb831544589d7369e29149311b55f013332",
+      "original_path": "../sources/single-character.png"
+    }
+  ],
+  "approvals": {
+    "visual_direction": false,
+    "reference_set": false
+  },
+  "geometric_consistency": "unverified"
+}

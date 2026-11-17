@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "mode": "single",
+  "quality": "quick",
+  "generation_order": "per-asset-complete",
+  "count_rationale": "Four directional panels of the same kiln traveler; count one, not four.",
+  "sources": [
+    {
+      "id": "turnaround",
+      "path": "kiln-traveler/contact_sheet.png"
+    }
+  ],
+  "assets": [
+    {
+      "id": "kiln-traveler",
+      "name": "Kiln traveler",
+      "category": "humanoid",
+      "style": "hand-painted storybook game concept, soft matte surfaces",
+      "master": "master_front.png",
+      "views": [
+        "front",
+        "left",
+        "back",
+        "right"
+      ],
+      "origin": "source-derived",
+      "regions": [
+        {
+          "source_id": "turnaround",
+          "box": [
+            21,
+            147,
+            1275,
+            1401
+          ]
+        },
+        {
+          "source_id": "turnaround",
+          "box": [
+            1296,
+            147,
+            2550,
+            1401
+          ]
+        },
+        {
+          "source_id": "turnaround",
+          "box": [
+            2571,
+            147,
+            3825,
+            1401
+          ]
+        },
+        {
+          "source_id": "turnaround",
+          "box": [
+            3846,
+            147,
+            5100,
+            1401
+          ]
+        }
+      ],
+      "identity_spec": {
+        "silhouette": "squat terracotta domed kiln biped, open chimney",
+        "features": "cream arched face, two round eyes, one pale blue chest medallion",
+        "anatomy": "two segmented arms with mitten fists, two short legs and broad feet",
+        "pose": "neutral standing, arms slightly separated",
+        "front": "face and badge",
+        "sides": "left faces image-left, right faces image-right"
+      },
+      "inferences": [
+        "Rear is a provisional continuous brick dome/barrel without another face or badge."
+      ],
+      "group": {
+        "id": "cast",
+        "label": "Cast"
+      },
+      "separation_rationale": "The same chimney, brick dome/body and limbs recur at four camera angles; one identity."
+    }
+  ]
+}

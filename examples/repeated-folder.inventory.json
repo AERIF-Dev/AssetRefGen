@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "mode": "folder",
+  "quality": "quick",
+  "generation_order": "per-asset-complete",
+  "count_rationale": "Seven appearances across two images resolve to three distinct designs, including one four-angle sheet.",
+  "sources": [
+    {
+      "id": "characters",
+      "path": "sources/characters.png"
+    },
+    {
+      "id": "turnaround",
+      "path": "kiln-traveler/contact_sheet.png"
+    }
+  ],
+  "assets": [
+    {
+      "id": "kiln-traveler",
+      "name": "Kiln traveler",
+      "category": "humanoid",
+      "style": "hand-painted storybook game concept, soft matte surfaces",
+      "master": "master_front.png",
+      "views": [
+        "front",
+        "left",
+        "back",
+        "right"
+      ],
+      "origin": "source-derived",
+      "regions": [
+        {
+          "source_id": "characters",
+          "box": [
+            0,
+            160,
+            575,
+            940
+          ]
+        },
+        {
+          "source_id": "turnaround",
+          "box": [
+            21,
+            147,
+            1275,
+            1401
+          ]
+        },
+        {
+          "source_id": "turnaround",
+          "box": [
+            1296,
+            147,
+            2550,
+            1401
+          ]
+        },
+        {
+          "source_id": "turnaround",
+          "box": [
+            2571,
+            147,
+            3825,
+            1401
+          ]
+        },
+        {
+          "source_id": "turnaround",
+          "box": [
+            3846,
+            147,
+            5100,
+            1401
+          ]
+        }
+      ],
+      "identity_spec": {
+        "silhouette": "squat terracotta domed kiln biped, open chimney",
+        "features": "cream arched face, two round eyes, one pale blue chest medallion",
+        "anatomy": "two segmented arms with mitten fists, two short legs and broad feet",
+        "pose": "neutral standing, arms slightly separated",
+        "front": "face and badge",
+        "sides": "left faces image-left, right faces image-right"
+      },
+      "inferences": [
+        "Rear is a provisional continuous brick dome/barrel without another face or badge."
+      ],
+      "group": {
+        "id": "cast",
+        "label": "Cast"
+      },
+      "separation_rationale": "The kiln in the lineup and its four-angle sheet share the same distinctive identity."
+    },
+    {
+      "id": "pond-courier",
+      "name": "Pond courier",
+      "category": "creature",
+      "style": "hand-painted storybook game concept, soft matte surfaces",
+      "master": "master_front.png",
+      "views": [
+        "front",
+        "left",
+        "back",
+        "right"
+      ],
+      "origin": "source-derived",
+      "regions": [
+        {
+          "source_id": "characters",
+          "box": [
+            600,
+            110,
+            980,
+            940
+          ]
+        }
+      ],
+      "identity_spec": {
+        "silhouette": "lanky green frog biped with broad smooth oval head",
+        "features": "ochre poncho, two eyes, long arms and legs, webbed hands and three-toed feet",
+        "anatomy": "two arms and two legs, no visible tail",
+        "pose": "natural relaxed standing"
+      },
+      "inferences": [
+        "Poncho rear and hidden joints are provisional; retain simple garment construction."
+      ],
+      "group": {
+        "id": "wildlife",
+        "label": "Wildlife"
+      },
+      "separation_rationale": "Distinct silhouette and distinguishing construction in the source."
+    },
+    {
+      "id": "moth-keeper",
+      "name": "Moth keeper",
+      "category": "creature",
+      "style": "hand-painted storybook game concept, soft matte surfaces",
+      "master": "master_front.png",
+      "views": [
+        "front",
+        "left",
+        "back",
+        "right"
+      ],
+      "origin": "source-derived",
+      "regions": [
+        {
+          "source_id": "characters",
+          "box": [
+            1030,
+            230,
+            1536,
+            940
+          ]
+        }
+      ],
+      "identity_spec": {
+        "silhouette": "round pear-shaped indigo moth, two feathered antennae",
+        "features": "orange oval eyes, lavender scarf, two small arms, two short feet, hanging wings",
+        "anatomy": "two arms, two feet, two wing covers, two antennae",
+        "pose": "resting, wings closed"
+      },
+      "inferences": [
+        "Hidden rear wing attachment is provisional; no additional limbs inferred."
+      ],
+      "group": {
+        "id": "wildlife",
+        "label": "Wildlife"
+      },
+      "separation_rationale": "Distinct silhouette and distinguishing construction in the source."
+    }
+  ]
+}

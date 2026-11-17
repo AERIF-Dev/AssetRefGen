@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "mode": "roster",
+  "quality": "quick",
+  "generation_order": "per-asset-complete",
+  "count_rationale": "A wheeled rover and a lantern have distinct functions, silhouettes and components.",
+  "sources": [
+    {
+      "id": "objects",
+      "path": "sources/objects.png"
+    }
+  ],
+  "assets": [
+    {
+      "id": "survey-rover",
+      "name": "Survey rover",
+      "category": "vehicle",
+      "style": "hand-painted storybook game concept, soft matte surfaces",
+      "master": "master_front.png",
+      "views": [
+        "front",
+        "left",
+        "back",
+        "right"
+      ],
+      "origin": "source-derived",
+      "regions": [
+        {
+          "source_id": "objects",
+          "box": [
+            10,
+            140,
+            820,
+            920
+          ]
+        }
+      ],
+      "identity_spec": {
+        "silhouette": "rounded teal vehicle with four chunky wheels on two axles",
+        "features": "cream front bumper, centered amber lamp, short mast with red ball sensor",
+        "state": "assembled, wheels straight, mast fixed",
+        "front": "lamp and cream bumper"
+      },
+      "inferences": [
+        "Far fourth wheel and hidden rear/underbody are provisional, preserve four-wheel design."
+      ],
+      "group": {
+        "id": "equipment",
+        "label": "Equipment"
+      },
+      "separation_rationale": "Distinct silhouette and distinguishing construction in the source."
+    },
+    {
+      "id": "signal-lantern",
+      "name": "Signal lantern",
+      "category": "prop_machinery",
+      "style": "hand-painted storybook game concept, soft matte surfaces",
+      "master": "master_front.png",
+      "views": [
+        "front",
+        "left",
+        "back",
+        "right"
+      ],
+      "origin": "source-derived",
+      "regions": [
+        {
+          "source_id": "objects",
+          "box": [
+            1080,
+            20,
+            1645,
+            915
+          ]
+        }
+      ],
+      "identity_spec": {
+        "silhouette": "copper six-sided lantern with arched handle and broad dark base",
+        "features": "amber glass chamber, domed cap, one bail handle",
+        "state": "assembled upright, handle upright",
+        "front": "one broad pane centered toward viewer"
+      },
+      "inferences": [
+        "Hidden frame edges complete a regular six-sided chamber; exact rear seam layout unknown."
+      ],
+      "group": {
+        "id": "equipment",
+        "label": "Equipment"
+      },
+      "separation_rationale": "Distinct silhouette and distinguishing construction in the source."
+    }
+  ]
+}

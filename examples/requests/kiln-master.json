@@ -1,0 +1,7 @@
+{
+  "prompt": "Create one isolated FRONT modeling master of the exact terracotta kiln robot in the supplied identity crop. This is an identity-preserving edit: preserve the squat brick-red domed barrel silhouette, cream inset ceramic face with TWO dark round eyes, short open chimney on crown, circular pale-blue chest badge with cream rim, chunky brick shoulders, two articulated arms, mitten-like terracotta fists with thumbs, two short legs and broad rounded feet. Preserve the warm hand-painted storybook style, matte ceramic/brick materials and visible brick pattern. Show complete body in a neutral relaxed stance, both feet visible, arms slightly away from torso, facing directly toward camera. Camera level, minimal perspective, orthographic-looking front elevation. Plain warm ivory background, soft even lighting, centered with clear margins; no label, no additional subjects or objects. Use a square 1024 by 1024 canvas if available. Do not redesign the character. This new isolated master will anchor all other directions; hidden back is provisional plain brick continuing the dome and torso with no second face or badge.",
+  "referenced_image_paths": [
+    "../sources/single-character.png"
+  ],
+  "transparent_background": false
+}

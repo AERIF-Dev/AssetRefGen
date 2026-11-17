@@ -1,0 +1,7 @@
+{
+  "prompt": "Identity-preserving camera change for the SAME terracotta kiln robot in the supplied selected master. Generate one strict anatomical/local LEFT profile, nose/face and front chest direction pointing toward image LEFT. Use master as primary identity anchor, never redesign. Maintain exact squat rounded kiln-dome head/body, short open chimney, terracotta brickwork, cream inset face only on front, pale blue circular badge only on front, two chunky segmented arms with mitten-like fists, two short legs and broad feet. Keep neutral stance and hands relaxed just away from torso, no wrist rotation for display. Keep proportions, component counts, matte hand-painted storybook style, warm ivory background and soft even light. Full body unclipped with margins, level orthographic-looking elevation, no text, no added subjects. The back, unseen in the source, is a provisional smoothly continuing brick dome and barrel, no second face, no second badge or invented hardware. Preserve this decision in every view. Maintain the same square 1254 by 1254 canvas and similar head/base positions as the supplied master if supported. Rotate only the camera to left; do not simply mirror another output.",
+  "referenced_image_paths": [
+    "../kiln-traveler/master_front.png"
+  ],
+  "transparent_background": false
+}
