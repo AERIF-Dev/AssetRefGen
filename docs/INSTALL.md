@@ -2,6 +2,8 @@
 
 Use either the Codex skill installer or the standalone ZIP to install `assetrefgen` v0.2.0. The [release page](https://github.com/AERIF-Dev/AssetRefGen/releases/tag/v0.2.0) lists the downloads and SHA-256 checksums.
 
+The v0.2.0 helpers passed validation on Windows and Linux. The macOS installation path below follows Codex's documented discovery rules. Installation and runtime on macOS remain unverified. [Validation results](TEST_RESULTS.md)
+
 If you already use AssetRefGen, find its current folder before installing a new copy. Check the project’s `.agents/skills`, your user skill directory, and any folder used by your installer. For an upgrade, move the entire old `assetrefgen` folder to a backup outside all skill discovery directories. A renamed folder inside a discovery directory can still expose the same skill name. [Codex skill discovery](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)
 
 ## Method A · Codex skill installer

@@ -15,7 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILL_NAME = "assetrefgen"
 SKILL_PREFIX = f"skills/{SKILL_NAME}/"
 ROOT_FILES = (
-    ".github/workflows/validate.yml", ".gitattributes", ".gitignore", "CHANGELOG.md", "CONTRIBUTING.md",
+    ".github/workflows/validate.yml", ".github/workflows/validate-macos.yml",
+    ".gitattributes", ".gitignore", "CHANGELOG.md", "CONTRIBUTING.md",
     "LICENSE", "README.md", "THIRD_PARTY_NOTICES.md", "VERSION", "requirements-dev.txt",
 )
 PUBLIC_EXAMPLES = (

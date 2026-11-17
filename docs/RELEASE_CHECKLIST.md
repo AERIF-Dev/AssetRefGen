@@ -21,6 +21,7 @@ Preparation checks below were completed by the agent on 2026-11-17. They are sep
 - [x] Extract the candidate standalone-skill ZIP to a fresh directory. Verify that its `assetrefgen/` folder contains `SKILL.md` and the referenced scripts, templates, and supporting files. Stable package mapping is covered by automated release tests.
 - [x] Inspect both archives for virtual environments, caches, private input files, credentials, and machine-specific paths. Verify that the release archives are readable and their reported checksums match.
 - [x] Confirm the instructions support review in place, optional installation to a single discovery location, and rollback with an existing installation.
+- [x] Extract the stable standalone skill ZIP and initialize a roster from a clean Python environment. Install from the public tested commit into an isolated destination and compare the installed files with the ZIP.
 
 ## Before optional global installation
 
@@ -31,13 +32,14 @@ Preparation checks below were completed by the agent on 2026-11-17. They are sep
 - [x] Owner authorized promotion and publication of the tested candidate, with MIT as the default license. Copyright holder: verified repository owner AERIF-Dev, year 2026. Dependency notices are documented.
 - [x] Owner explicitly authorized commit, push, version tag and GitHub release to `AERIF-Dev/AssetRefGen`.
 - [x] Preserve proposed v0.3.0 work as documentation only; keep runtime behavior at the tested v0.2.0 scope.
+- [x] Record the release decision under the owner's delegated judgment. Windows and Linux are required. Keep macOS compatibility explicitly unverified and available for a manual follow-up check.
 
 ## Final public verification
 
 Complete against the exact published commit and release. GitHub's workflow and release pages provide the authoritative hosted state.
 
 - [x] Push the reviewed public files to `main` without force and verify the remote commit.
-- [ ] Confirm all hosted validation jobs pass before tagging stable v0.2.0.
+- [ ] Confirm required Windows and Linux hosted validation passes on the release commit before tagging stable v0.2.0.
 - [x] Verify README rendering and public gallery-image responses.
 - [ ] Run the official skill installer against the public tagged directory into an isolated test destination.
 - [ ] Download published assets, verify checksums, extract both ZIPs and confirm required files.

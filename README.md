@@ -28,7 +28,7 @@ $assetrefgen Process all assets in this folder in Quick Mode.
 $assetrefgen Resume my unfinished batch.
 ```
 
-The file helpers require Python 3.10+ and Pillow 10.1+. For installation paths, dependencies, and manual setup, see the [install guide](docs/INSTALL.md). The [quickstart](docs/QUICKSTART.md) and [sample prompts](docs/SAMPLE_PROMPTS.md) cover common requests.
+The file helpers require Python 3.10+ and Pillow 10.1+. The v0.2.0 helpers passed validation on Windows and Linux. macOS compatibility is unverified. For installation paths and dependencies, see the [install guide](docs/INSTALL.md). The [quickstart](docs/QUICKSTART.md) and [sample prompts](docs/SAMPLE_PROMPTS.md) cover common requests.
 
 ## What you get
 

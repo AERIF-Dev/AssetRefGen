@@ -7,6 +7,7 @@
 - Included a public example gallery, original roster fixtures, and one complete live four-view reference set with provenance and visual QA.
 - Added a local project validation command and a CI workflow for checks that use existing fixtures.
 - Fixed roster initialization when Windows temporary directories use 8.3 short-path aliases, with an initialization/resume regression test.
+- Validated Windows and Linux; kept macOS compatibility explicitly unverified after hosted runner provisioning failed. A separate manual macOS workflow is included.
 
 ## 0.2.0-rc.1
 

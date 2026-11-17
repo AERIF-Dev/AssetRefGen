@@ -16,7 +16,19 @@ python -m unittest discover -s tests -v
 python scripts/build_release.py --out dist/v0.2.0
 ```
 
-The [Validate workflow](https://github.com/AERIF-Dev/AssetRefGen/actions/workflows/validate.yml) runs the same gates on Linux/Python 3.10/Pillow 10.1.0, Windows/Python 3.13, and Intel macOS 15/Python 3.13. The macOS job uses GitHub's supported `macos-15-intel` label after the default ARM64 runner remained queued without executing. Hosted results are recorded per commit in GitHub Actions; they are separate from the local Windows evidence above. Native Apple Silicon execution remains unverified. Release archives include the complete skill and license, enforce a public-file allowlist, check internal links, verify ZIP readback/CRC and emit SHA-256 checksums. They exclude development outputs, exact local receipts and private source material.
+The default [Validate workflow](https://github.com/AERIF-Dev/AssetRefGen/actions/workflows/validate.yml) runs on push and pull requests for Windows and Linux. Hosted results for the tested runtime at commit `cf50d4f` were as follows.
+
+| Hosted environment | Result |
+| --- | --- |
+| Windows, Python 3.13 | 23 passed, including the Windows short-path regression |
+| Linux, Python 3.10, Pillow 10.1.0 | 22 passed, 1 Windows-only short-path test skipped |
+| macOS, including Apple Silicon | Unverified. Neither architecture ran during release qualification. |
+
+GitHub canceled the Intel job `134190080741` after multiple runner-acquisition attempts. The retry was still queued when the release gate was set. The release gate requires Windows and Linux. The manual `macOS compatibility` workflow is available for follow-up testing. [macOS compatibility workflow](https://github.com/AERIF-Dev/AssetRefGen/actions/workflows/validate-macos.yml)
+
+The release archives include the complete skill and license. Packaging enforces a public-file allowlist, checks internal links, verifies ZIP readback and CRC, and emits SHA-256 checksums. The archive contents exclude development outputs, exact local receipts and private source material.
+
+On Windows, the extracted standalone skill passed roster initialization in a clean Python 3.13/Pillow 13.0.0 environment. The official Codex installer also installed the skill from public commit `cf50d4f` into an isolated destination. All 17 installed files matched the standalone ZIP byte for byte. Installation from the public tag and verification of the published downloads are tracked in the [release checklist](RELEASE_CHECKLIST.md).
 
 ## Candidate validation retained below — 0.2.0-rc.1
 

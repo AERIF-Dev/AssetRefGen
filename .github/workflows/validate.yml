@@ -22,9 +22,6 @@ jobs:
           - os: windows-latest
             python: '3.13'
             pillow: Pillow
-          - os: macos-15-intel
-            python: '3.13'
-            pillow: Pillow
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
